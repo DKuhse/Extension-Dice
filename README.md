@@ -22,6 +22,16 @@ To roll the dice, just ask for it. For example:
 Roll a d20
 ```
 
+#### Editing function tool rolls
+
+Function tool rolls have an edit button next to each roller in the tool call summary. You can change the dice formula and individual die values; the total is calculated automatically. Invalid formulas, missing dice, and values outside the die range cannot be saved.
+
+Edited rolls are marked as edited and can be restored to their original recorded values. Edits and restores apply immediately; later chat messages are kept and may still describe the previous result.
+
+Editing updates both the displayed tool call and the structured result sent in future prompts. The original value is retained only as local chat metadata for the restore action and is not included in model context. Stored tool reasoning is preserved. The tool-call signature is also preserved when only die values change, but is cleared when the formula changes because the signature may be tied to the original arguments.
+
+Messages can contain rolls from multiple sources. Each roll has independent edit and restore controls.
+
 ### Via the wand menu
 
 A set of 7 classic D&amp;D dice for all your dice rolling needs. Dice rolls are just for show and are not visible in AI prompts.
